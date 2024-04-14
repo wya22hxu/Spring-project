@@ -17,6 +17,38 @@
 # linear models
 # wing size vs rain colour for sex ect
 
+
+#__________________________----
+
+
+# simple bar chart of n males and n females 
+
+#577 to 57.7  exclude! safe options to assumptions  or repace with variable av 
+#exlude with filter  anything less than 200  into new data f?
+
+# re run histograms
+
+#use ggally to produce paired plots to see effects
+#- length and rain - little evidence to suggest
+#- can see females bigger than males but no evidnece this is related to rain (sex interaction not diff with rain )
+#-
+
+
+#- sex respodes diff to temp  (slopes diff but weak diff)
+#- further needed 
+
+
+# add interaciton term btwn sex and length in model_beta_variables(
+
+# go thru and define all models + tests
+
+# heterogenaity  homogenaity of variance
+
+# car packages has qq polt function whihc adds inetervals -
+
+
+#ues emmeans to produce == plots  
+
 #________________________ ----
 # SET UP ----
 
@@ -102,6 +134,26 @@ butterfly %>%
 
 # produce a summary of our data
 summary(butterfly)
+
+
+butterfly %>% 
+  ggplot(aes(x = jun_rain)) +
+  geom_histogram()
+# outlier at 600 - remove?
+
+
+butterfly %>% 
+  ggplot(aes(x = forewing_length)) +
+  geom_histogram()
+# No outliers
+
+butterfly %>% 
+  ggplot(aes(x = jun_temp_mean)) +
+  geom_histogram()
+# No outliers
+
+
+
 
 #__________________________----
 
